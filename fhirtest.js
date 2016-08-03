@@ -19,6 +19,9 @@ da.proc = function (data) {
 };
 
 $(document).ready(function () {
-    var url = "https://fhir-open.sandboxcernerpowerchart.com/dstu2/d075cf8b-3261-481d-97e5-ba6c48d3b41f/Patient?name=Pond";
-    fhir.get(url, da.proc);
+    $('#sname').click(function () {
+        var sname = $("#sname").value;
+        var url = "https://fhir-open.sandboxcernerpowerchart.com/dstu2/d075cf8b-3261-481d-97e5-ba6c48d3b41f/Patient?name=" + sname;
+        fhir.get(url, da.proc);
+    });
 });
