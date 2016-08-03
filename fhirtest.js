@@ -3,8 +3,9 @@
  */
 fhir = {};
 
-fhir.get = function (url) {
+fhir.get = function (url, callback) {
     $.getJSON(url, function (data) {
         console.log(data);
+        callback(data.entry);
     });
 };
