@@ -14,7 +14,7 @@ da = {};
 
 da.proc = function (data) {
     data.map(function (patient) {
-        $('#dt tbody').append("<tr><td>" + patient.resource.name.text + "</td><td>" + patient.resource.birthDate + "</td></tr>");
+        $('#dt tbody').append("<tr><td>" + patient.resource.name[0].text + "</td><td>" + patient.resource.birthDate + "</td></tr>");
     });
 };
 
